@@ -1,0 +1,106 @@
+{
+    "0": {
+      "order_id": 0,
+      "client_id": 123,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:48:55.5437164"
+    },
+    "1": {
+      "order_id": 1,
+      "client_id": 123,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:17:46.5437164"
+    },
+    "2": {
+      "order_id": 2,
+      "client_id": 123,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:51:42.5437164"
+    },
+    "3": {
+      "order_id": 3,
+      "client_id": 124,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "",
+      "recording_time": "2024-09-06 08:53:8.5437164"
+    },
+    "4": {
+      "order_id": 4,
+      "client_id": 124,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:36:9.5437164"
+    },
+    "5": {
+      "order_id": 5,
+      "client_id": 123,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "",
+      "recording_time": "2024-09-06 08:30:49.5437164"
+    },
+    "6": {
+      "order_id": 6,
+      "client_id": 124,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "",
+      "recording_time": "2024-09-06 08:50:38.5437164"
+    },
+    "7": {
+      "order_id": 7,
+      "client_id": 123,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:59:3.5437164"
+    },
+    "8": {
+      "order_id": 8,
+      "client_id": 125,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "",
+      "recording_time": "2024-09-06 08:58:22.5437164"
+    },
+    "9": {
+      "order_id": 9,
+      "client_id": 123,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "",
+      "recording_time": "2024-09-06 08:59:41.5437164"
+    },
+    "10": {
+      "order_id": 10,
+      "client_id": 124,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:11:58.5437164"
+    },
+    "11": {
+      "order_id": 11,
+      "client_id": 125,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:16:16.5437164"
+    },
+    "12": {
+      "order_id": 12,
+      "client_id": 125,
+      "storage_period": "2024-09-08",
+      "issue_date": "2024-09-07",
+      "refund_date": "2024-09-08",
+      "recording_time": "2024-09-06 08:28:53.5437164"
+    }
+}

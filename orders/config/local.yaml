@@ -1,0 +1,2 @@
+env: "local" # local, prod
+storage_path: "storage/storage.json"
