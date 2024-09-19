@@ -1,8 +1,3 @@
-/*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
-*/
-
 package main
 
 import (
@@ -29,7 +24,7 @@ func main() {
 	}
 
 	// init cobra-cli
-	err = cmd.Execute(&storage, log)
+	err = cmd.Execute(&storage)
 	if err != nil {
 		log.Error("can't init commands", sl.Err(err))
 		return

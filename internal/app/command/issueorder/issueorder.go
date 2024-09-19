@@ -29,16 +29,16 @@ func IssueOrder(s jsondb.Storage, orders []int) error {
 
 		if !ok {
 			log.Println(op, "INFO: Order №", o, "does not exist")
-		} else {
-			clients[order.ClientID] = append(clients[order.ClientID], order.OrderId)
-			// Если больше одного клиента
-			if len(clients) > 1 {
-				return fmt.Errorf("%s: %w", op, storage.ErrAttemptIssueFewClients)
-			}
-
-			order.IssueDate = today
-			data[o] = order
+			continue
 		}
+		clients[order.ClientID] = append(clients[order.ClientID], order.OrderId)
+		// Если больше одного клиента
+		if len(clients) > 1 {
+			return fmt.Errorf("%s: %w", op, storage.ErrAttemptIssueFewClients)
+		}
+
+		order.IssueDate = today
+		data[o] = order
 
 	}
 

@@ -3,7 +3,7 @@ package storage
 import "errors"
 
 var (
-	//Ошибки баз данных
+	//Storage errrors
 	ErrOrderNotFound = errors.New("order not found")     // Возвращается, если заказ с таким id не существует
 	ErrOrderExist    = errors.New("order already exist") // Возвращается при попытке занести заказ id которого уже есть в базе
 

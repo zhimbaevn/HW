@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"orders/internal/app/command/refundlist"
 	"orders/internal/app/order"
-	"orders/internal/lib/logger/sl"
 	"os"
 	"os/exec"
 	"strings"
@@ -15,30 +15,27 @@ import (
 
 var refLsCmd = &cobra.Command{
 	Use:   "refls",
-	Short: "Вывести список возвратов",
-	Long: `Постраничный список возвратов.
-Для навигации используйте n и p или вручную введите номер требуемой страницы`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Short: "display a list of refunds",
+	Long: `Display a list of refunds.
+Navigation is performed using the 'n' and 'p' keys.`,
+	RunE: func(cmd *cobra.Command, args []string) error {
 		const op = "refundlist.refLsCmd.Run"
 
 		pageSize, err := cmd.Flags().GetInt("lines")
 		if err != nil {
-			Log.Error("can't parse --lines", sl.Err(fmt.Errorf("%s: %w", op, err)))
-			return
+			return fmt.Errorf("%s: %w", op, err)
 		}
 
 		data, err := refundlist.GetRefund(Storage)
 		if err != nil {
-			Log.Error("can't get data", sl.Err(fmt.Errorf("%s: %w", op, err)))
-			return
+			return fmt.Errorf("%s: %w", op, err)
 		}
 
 		page := 0
 		reader := bufio.NewReader(os.Stdin)
 
 		if len(data) == 0 {
-			Log.Info("No refunds found")
-			return
+			return fmt.Errorf("%s: %w", op, errors.New("no refunds found"))
 		}
 
 		for {
@@ -48,8 +45,7 @@ var refLsCmd = &cobra.Command{
 			fmt.Printf("\nСтраница %d из %d. Нажмите 'n' для следующей страницы, 'p' для предыдущей страницы, 'q' для выхода.\n", page+1, (len(data)+pageSize-1)/pageSize)
 			input, err := reader.ReadString('\n')
 			if err != nil {
-				Log.Error("can't ReadString from Stdin", sl.Err(fmt.Errorf("%s: %w", op, err)))
-				return
+				return fmt.Errorf("%s: %w", op, err)
 			}
 			input = strings.TrimSpace(input)
 
@@ -63,7 +59,7 @@ var refLsCmd = &cobra.Command{
 					page--
 				}
 			case "q":
-				return
+				return nil
 			default:
 				fmt.Println("Неизвестная команда")
 				fmt.Printf("Список команд:\nn - следующая страница\np - предыдущая страница\nq - выход\n\n")
@@ -71,11 +67,6 @@ var refLsCmd = &cobra.Command{
 		}
 
 	},
-}
-
-func init() {
-	rootCmd.AddCommand(refLsCmd)
-	refLsCmd.Flags().IntP("lines", "l", 5, "number of lines per page")
 }
 
 func clearConsole() {

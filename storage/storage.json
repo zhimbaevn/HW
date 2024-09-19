@@ -3,24 +3,24 @@
       "order_id": 0,
       "client_id": 123,
       "storage_period": "2024-09-08",
-      "issue_date": "2024-09-07",
-      "refund_date": "2024-09-08",
+      "issue_date": "",
+      "refund_date": "",
       "recording_time": "2024-09-06 08:48:55.5437164"
     },
     "1": {
       "order_id": 1,
       "client_id": 123,
       "storage_period": "2024-09-08",
-      "issue_date": "2024-09-07",
-      "refund_date": "2024-09-08",
+      "issue_date": "",
+      "refund_date": "",
       "recording_time": "2024-09-06 08:17:46.5437164"
     },
     "2": {
       "order_id": 2,
       "client_id": 123,
       "storage_period": "2024-09-08",
-      "issue_date": "2024-09-07",
-      "refund_date": "2024-09-08",
+      "issue_date": "",
+      "refund_date": "",
       "recording_time": "2024-09-06 08:51:42.5437164"
     },
     "3": {
